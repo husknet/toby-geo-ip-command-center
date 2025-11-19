@@ -394,7 +394,7 @@ app.get('/api/geoip/:ip', async (req, res) => {
     
     console.log(`📍 GeoIP lookup requested for: ${clientIP}`);
     
-    const response = await fetch(`https://ipapi.co/${clientIP}/json/?key=xUIyBT1s3KZPmLB6ewWvkFNBa4nW4B3btPrk9WNcHJnwezGqFH`);
+    const response = await fetch(`https://ipapi.co/${clientIP}/json/?key=ZUaXKFFdZoQ6KbtOUBM2I2QHDE72MZcZxZxA7bh5falIjhEQmH`);
     
     if (!response.ok) {
       throw new Error(`ipapi.co returned ${response.status}`);
@@ -478,4 +478,5 @@ app.listen(PORT, '0.0.0.0', async () => {
   console.log(`🔒 Domain whitelist active: ${app.locals.config.allowAllDomains ? 'DISABLED' : 'ENABLED'}`);
   console.log(`🌍 Country code mapping: ${Object.keys(COUNTRY_CODE_MAP).length} countries loaded`);
 });
+
 
